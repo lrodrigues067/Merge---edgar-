@@ -1,1 +1,292 @@
 # Merge---edgar-
+
+
+
+library(dplyr)
+
+#Merging the datasets of the companys that have a 10-k report 
+
+A = rbind(threeM, ap) %>% 
+  rbind(electrolux) %>%
+  rbind(abb) %>% 
+  rbind(abbey) %>% 
+  rbind(abbott) %>% 
+  rbind(abbvie) %>% 
+  rbind(abn) %>% 
+  rbind(accenture) %>% 
+  rbind(acciona) %>% 
+  rbind(acer) %>% 
+  rbind(achmea) %>% 
+  rbind(acs) %>% 
+  rbind(adecco) %>% 
+  rbind(adeccosa) %>% 
+  rbind(adidas) %>%  
+  rbind(advance) %>% 
+  rbind(aegon) %>%  
+  rbind(aeon) %>%  
+  rbind(aescorp) %>% 
+  rbind(aetna) %>% 
+  rbind(aflac) %>% 
+  rbind(ageas) %>% 
+  rbind(agri_bank_chi) %>% 
+  rbind(aia) %>% 
+  rbind(aig) %>% 
+  rbind(airfrance) %>% 
+  rbind(airbus) %>% 
+  rbind(aisin) %>% 
+  rbind(akzo) %>% 
+  rbind(albertson) %>% 
+  rbind(alcan) %>% 
+  rbind(alcan_alumin) %>% 
+  rbind(alcatel) %>%
+  rbind(alco) %>%
+  rbind(alcoa) %>%
+  rbind(alcoainc) %>%
+  rbind(alfresa) %>%
+  rbind(alibaba) %>%
+  rbind(alimentation) %>%
+  rbind(allnippon) %>%
+  rbind(allegheny) %>%
+  rbind(alliance) %>%
+  rbind(alliance_uni) %>%
+  rbind(allianz) %>%
+  rbind(alliedsignal) %>%
+  rbind(allstate) %>%
+  rbind(alphabet) %>% 
+  rbind(alstom) %>% 
+  rbind(altadis) %>%
+  rbind(altice) %>%
+  rbind(altria) %>%
+  rbind(aluminum_company) %>%
+  rbind(aluminum_china) %>%
+  rbind(amazon) %>%
+  rbind(amer) %>%
+  rbind(amerada) %>%
+  rbind(america_movil) %>%
+  rbind(america_telecom) %>%
+  rbind(american_airlines) %>%
+  rbind(american_electric) %>%
+  rbind(american_express) %>%
+  rbind(american_general) %>%
+  rbind(american_home) %>%
+  rbind(american_intl) %>%
+  rbind(american_stores) %>%
+  rbind(amerisource_health) %>%
+  rbind(amerisourcebergen) %>%
+  rbind(ameritech) %>%
+  rbind(amgen) %>%
+  rbind(amoco) %>%
+  rbind(amp) %>%
+  rbind(andeavor) %>%
+  rbind(anglo) %>%
+  rbind(anheuser) %>%
+  rbind(anthem) %>%
+  rbind(aol) %>%
+  rbind(apple) %>%
+  rbind(aquila) %>%
+  rbind(arcelor) %>%
+  rbind(archer) %>%
+  rbind(arconic) %>%
+  rbind(areva) %>%
+  rbind(argyll) %>%
+  rbind(arrow) %>%
+  rbind(asahi_bank) %>%
+  rbind(asahi_chemical) %>%
+  rbind(asahi_glass) %>%
+  rbind(asahi_kasei) %>%
+  rbind(asahi_mutual) %>%
+  rbind(asda) %>%
+  rbind(ashland) %>%
+  rbind(assicurazioni) %>%
+  rbind(associates) %>%
+  rbind(assurances) %>%
+  rbind(astrazeneca) %>%
+  rbind(asustek) %>%
+  rbind(att) %>%
+  rbind(atlantic) %>%
+  rbind(aus_nz_bnkg) %>%
+  rbind(autonation) %>%
+  rbind(aventis) %>%
+  rbind(aviva) %>%
+  rbind(avnet) %>%
+  rbind(axa) 
+
+write.csv(A, "A")
+
+#Merging the datasets of companys that have a 10-k report starting with the letter B  
+B = rbind(bat, bae) %>%
+   rbind(baker) %>%
+   rbind(banc_one) %>%
+   rbind(banca_commerciale) %>%
+   rbind(banca_intensa) %>%
+   rbind(banca_monte) %>%
+   rbind(bilbao) %>%
+   rbind(bradesco) %>%
+   rbind(banco_central) %>%
+   rbind(banco_dobrasil) %>%
+   rbind(santander) %>%
+   rbind(bank_of_america) %>%
+   rbind(bank_of_china)
+   rbind(bank_of_communications) %>%
+   rbind(bank_of_ireland) %>%
+   rbind(bank_of_montreal) %>%
+   rbind(bank_of_ns) %>%
+   rbind(bank_of_sctld) %>%
+   rbind(bank_one) %>%
+   rbind(bankamerica) %>%
+   rbind(bankers_trust) %>%
+   rbind(bankgesellschaft) %>%
+   rbind(banque) %>%
+   rbind(barclays) %>%
+   rbind(basf) %>%
+   rbind(baxter) %>%
+   rbind(bayer) %>%
+   rbind(bayerische_wechsel) %>%
+   rbind(bayerische_hypo) %>%
+   rbind(bayerische_land) %>%
+   rbind(bayerische_mot) %>%
+   rbind(bayerische_vere) %>%
+   rbind(bce) %>%
+   rbind(bear_stearns) %>%
+   rbind(bell_atlantic) %>%
+   rbind(bergen) %>%
+   rbind(berkshire) %>%
+   rbind(bertelsmann) %>%
+   rbind(best_buy) %>%
+   rbind(bestfoods) %>%
+   rbind(bg_group) %>%
+   rbind(bharat) %>%
+   rbind(bhp_billiton) %>%
+   rbind(bmw) %>%
+   rbind(bnp) %>%
+   rbind(boehringer) %>%
+   rbind(bell_atlantic) %>%
+   rbind(boeing) %>%
+   rbind(bombardier) %>%
+   rbind(bosch) %>%
+   rbind(bouygues) %>%
+   rbind(bp) %>%
+   rbind(brazilian_dist) %>%
+   rbind(bridgestone) %>%
+   rbind(bristol) %>%
+   rbind(british_aerospace) %>%
+   rbind(british_airways) %>%
+   rbind(british_tobacco) %>%
+   rbind(british_gas) %>%
+   rbind(british_steel) %>%
+   rbind(british_tele) %>%
+   rbind(brookfield) %>%
+   rbind(bt) %>%
+   rbind(btr) %>%
+   rbind(bunge) %>%
+   rbind(burlington) 
+
+write.csv(B,"B")
+
+#Merging the datasets of companys that have a 10-k report starting with the latter C
+C = rbind(cable, caltex) %>% 
+  rbind(canadian_imp) %>% 
+  rbind(abn) %>% 
+  rbind(canadian_pacific) %>% 
+  rbind(canon) %>% 
+  rbind(capital_one) %>% 
+  rbind(cardinal) %>% 
+  rbind(caremark) %>% 
+  rbind(carrefour) %>% 
+  rbind(carso) %>% 
+  rbind(caterpillar) %>%  
+  rbind(cathay_financial) %>% 
+  rbind(cbs) %>%  
+  rbind(ceconomy) %>%  
+  rbind(cemex) %>% 
+  rbind(centene) %>% 
+  rbind(centex) %>% 
+  rbind(central_japan) %>% 
+  rbind(centrica) %>% 
+  rbind(cgnu) %>% 
+  rbind(charter_com) %>% 
+  rbind(chase_manhattan) %>% 
+  rbind(chemchina) %>% 
+  rbind(chem_banking) %>% 
+  rbind(chevron) %>% 
+  rbind(china_com) %>% 
+  rbind(china_construction) %>% 
+  rbind(cosco) %>% 
+  rbind(datang) %>%
+  rbind(china_bank) %>%
+  rbind(china_electronics) %>%
+  rbind(china_energy_eng) %>%
+  rbind(china_energy) %>%
+  rbind(china_everbright) %>%
+  rbind(china_evergrande) %>%
+  rbind(china_huadian) %>%
+  rbind(china_huaneng) %>%
+  rbind(china_life) %>%
+  rbind(china_merchants) %>%
+  rbind(china_metallurgical) %>%
+  rbind(china_minmetals) %>%
+  rbind(china_minsheng) %>%
+  rbind(china_mobile) %>% 
+  rbind(china_bldg) %>% 
+  rbind(china_chem) %>%
+  rbind(china_machinery) %>%
+  rbind(china_offshore) %>%
+  rbind(china_pet) %>%
+  rbind(china_pharm) %>%
+  rbind(china_nonferrous) %>%
+  rbind(china_ocean) %>%
+  rbind(china_pacific) %>%
+  rbind(china_petroch) %>%
+  rbind(china_poly) %>%
+  rbind(american_airlines) %>%
+  rbind(american_electric) %>%
+  rbind(american_express) %>%
+  rbind(american_general) %>%
+  rbind(american_home) %>%
+  rbind(american_intl) %>%
+  rbind(american_stores) %>%
+  rbind(amerisource_health) %>%
+  rbind(amerisourcebergen) %>%
+  rbind(ameritech) %>%
+  rbind(amgen) %>%
+  rbind(amoco) %>%
+  rbind(amp) %>%
+  rbind(andeavor) %>%
+  rbind(anglo) %>%
+  rbind(anheuser) %>%
+  rbind(anthem) %>%
+  rbind(aol) %>%
+  rbind(apple) %>%
+  rbind(aquila) %>%
+  rbind(arcelor) %>%
+  rbind(archer) %>%
+  rbind(arconic) %>%
+  rbind(areva) %>%
+  rbind(argyll) %>%
+  rbind(arrow) %>%
+  rbind(asahi_bank) %>%
+  rbind(asahi_chemical) %>%
+  rbind(asahi_glass) %>%
+  rbind(asahi_kasei) %>%
+  rbind(asahi_mutual) %>%
+  rbind(asda) %>%
+  rbind(ashland) %>%
+  rbind(assicurazioni) %>%
+  rbind(associates) %>%
+  rbind(assurances) %>%
+  rbind(astrazeneca) %>%
+  rbind(asustek) %>%
+  rbind(att) %>%
+  rbind(atlantic) %>%
+  rbind(aus_nz_bnkg) %>%
+  rbind(autonation) %>%
+  rbind(aventis) %>%
+  rbind(aviva) %>%
+  rbind(avnet) %>%
+  rbind(axa) 
+
+
+  
+  
+  
+write.csv(C1,"C1")
