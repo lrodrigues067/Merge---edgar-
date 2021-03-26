@@ -1,11 +1,13 @@
-# Merge---edgar-
+#file name: Merging the Datasets
+#objective: Unite all the datasets by following the alphabet
+#author: Leticia Rodrigues
+#created on: February - March (2021)
+#last accessed on:
 
-
-
-
+#install.packages(dplyr)
 library(dplyr)
 
-#Merging the datasets of the companys that have a 10-k report 
+#Merging the datasets of the companys that starts with the letter A - ok
 
 A = rbind(threeM, ap) %>% 
   rbind(electrolux) %>%
@@ -115,20 +117,6 @@ A = rbind(threeM, ap) %>%
 write.csv(A, "A")
 
 #Merging the datasets of companys that have a 10-k report starting with the letter B  
-vecnames <- c(bat, bae, baker, banc_one, banca_commerciale, banca_intensa, banca_intensa,
-              banca_monte, bilbao, bradesco, banco_central, banco_dobrasil, santander, bank_of_america, 
-              bank_of_china, bank_of_communications, bank_of_ireland, bank_of_montreal, bank_of_ns, 
-              bank_of_sctld, bank_one, bankamerica, bankers_trust, bankgesellschaft, banque, barclays, 
-              basf, baxter, bayer, bayerische_wechsel, bayerische_hypo, bayerische_land, bayerische_mot,
-              bayerische_vere, bce, bear_stearns, bell_atlantic, bergen, berkshire, bertelsmann, best_buy, 
-              bestfoods, bg_group, bharat, bhp_billiton, bmw, bnp, boehringer, boeing, bombardier, bosch, 
-              bouygues, bp, brazilian_dist, bridgestone, bristol, british_aerospace, british_airways,
-              british_tobacco, british_gas, british_steel, british_tele, brookfield, bt, btr, bunge, burlington)
-
-for(i in vecnames) {
-  print(ncol(i))
-}
-
 B = rbind(bat, bae) %>%
    rbind(baker) %>%
    rbind(banc_one) %>%
@@ -141,7 +129,7 @@ B = rbind(bat, bae) %>%
    rbind(banco_dobrasil) %>%
    rbind(santander) %>%
    rbind(bank_of_america) %>%
-   rbind(bank_of_china)
+   rbind(bank_of_china) %>%
    rbind(bank_of_communications) %>%
    rbind(bank_of_ireland) %>%
    rbind(bank_of_montreal) %>%
@@ -198,7 +186,7 @@ B = rbind(bat, bae) %>%
 
 write.csv(B,"B")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter C
+#Merging the datasets of companys that have a 10-k report starting with the latter C - ok
 C = rbind(cable, caltex) %>% 
   rbind(canadian_imp) %>% 
   rbind(abn) %>% 
@@ -330,7 +318,7 @@ C = rbind(cable, caltex) %>%
 write.csv(C,"C")
 
 
-#Merging the datasets of companys that have a 10-k report starting with the latter D
+#Merging the datasets of companys that have a 10-k report starting with the latter D - ok
 D = rbind(dr_horton, dai_nippon) %>% 
   rbind(daido) %>% 
   rbind(daiei) %>% 
@@ -375,7 +363,7 @@ D = rbind(dr_horton, dai_nippon) %>%
 
 write.csv(D,"D")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter E
+#Merging the datasets of companys that have a 10-k report starting with the latter E - ok
 E = rbind(ei_dupont, eads) %>% 
   rbind(east_japan) %>% 
   rbind(eastman) %>% 
@@ -416,7 +404,7 @@ E = rbind(ei_dupont, eads) %>%
 
 write.csv(E,"E")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter F
+#Merging the datasets of companys that have a 10-k report starting with the latter F - ok
 f = rbind(facebook, fannie_mae) %>% 
   rbind(farmland) %>% 
   rbind(fdx) %>% 
@@ -454,7 +442,7 @@ f = rbind(facebook, fannie_mae) %>%
 
 write.csv(f,"f")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter G
+#Merging the datasets of companys that have a 10-k report starting with the latter G - ok
 G = rbind(galp, gan) %>% 
   rbind(gap) %>% 
   rbind(gas_natural) %>% 
@@ -535,7 +523,7 @@ H = rbind(hm, heinz) %>%
 write.csv(H,"H")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter I - ok
-I = rbind(iberdrola, ibm) %>% 
+ii = rbind(iberdrola, ibm) %>% 
   rbind(ibp) %>% 
   rbind(idemitsu) %>% 
   rbind(ikon) %>% 
@@ -569,9 +557,9 @@ I = rbind(iberdrola, ibm) %>%
   rbind(itt_hartford) %>%
   rbind(itt_industries)
 
-write.csv(I,"I")
+write.csv(ii,"ii")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter J
+#Merging the datasets of companys that have a 10-k report starting with the latter J - ok
 J = rbind(jsainsbury, jcpenney) %>% 
   rbind(jp_morgan) %>% 
   rbind(japan_airlines) %>% 
@@ -592,7 +580,7 @@ J = rbind(jsainsbury, jcpenney) %>%
 
 write.csv(J,"J")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter K
+#Merging the datasets of companys that have a 10-k report starting with the latter K - ok
 K = rbind(kajima, kansai) %>% 
   rbind(kawasaki) %>% 
   rbind(kawasaki_steel) %>% 
@@ -687,7 +675,7 @@ M = rbind(macys, maersk) %>%
   rbind(medco) %>% 
   rbind(mediceo) %>% 
   rbind(meiji) %>% 
-  rbind(melville)
+  rbind(melville) %>%
   rbind(mercantil) %>% 
   rbind(merck) %>% 
   rbind(merril_lynch) %>% 
@@ -714,7 +702,7 @@ M = rbind(macys, maersk) %>%
   rbind(mitsui_sumitomo) %>% 
   rbind(mitsukoshi) %>%
   rbind(mittal) %>% 
-  rbind(mizuho)
+  rbind(mizuho) %>%
   rbind(mizuho_holdings) %>%
   rbind(mobil) %>% 
   rbind(moller) %>%
@@ -761,7 +749,7 @@ N = rbind(nabisco, national_ausbank) %>%
   rbind(nissan) %>% 
   rbind(nissho) %>% 
   rbind(nkk) %>% 
-  rbind(noble)
+  rbind(noble) %>%
   rbind(nokia) %>% 
   rbind(nomura) %>% 
   rbind(norddeutsche) %>% 
@@ -781,7 +769,7 @@ N = rbind(nabisco, national_ausbank) %>%
 
 write.csv(N,"N")
 
-#Merging the datasets of companys that have a 10-k report starting with the latter O
+#Merging the datasets of companys that have a 10-k report starting with the latter O - ok
 O = rbind(oao_gazprom, oao_lukoil) %>% 
   rbind(obayashi) %>% 
   rbind(occidental) %>% 
@@ -799,7 +787,7 @@ O = rbind(oao_gazprom, oao_lukoil) %>%
 write.csv(O,"O")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter P
-P = rbind(paccar, pacific_gas) %>% 
+p1 = rbind(paccar, pacific_gas) %>% 
   rbind(pacific_telesis) %>% 
   rbind(pacificare) %>% 
   rbind(panasonic) %>% 
@@ -827,7 +815,7 @@ P = rbind(paccar, pacific_gas) %>%
   rbind(ping_an) %>% 
   rbind(pkn) %>% 
   rbind(plains_all) %>% 
-  rbind(plains_holdings)
+  rbind(plains_holdings) %>%
   rbind(pnc) %>% 
   rbind(pohang) %>% 
   rbind(posco) %>% 
@@ -847,22 +835,23 @@ P = rbind(paccar, pacific_gas) %>%
   rbind(publix) %>% 
   rbind(pulte) 
 
-write.csv(P,"P")
+write.csv(p1,"p1")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter Q
 Q = rbind(qualcomm, quanta) %>% 
-  rbind(qwest) %>% 
+  rbind(qwest)
   
 write.csv(Q,"Q")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter R
-M = rbind(rj, rabobank) %>% 
+R = rbind(rj, rabobank) %>% 
   rbind(rag) %>% 
   rbind(randstad) %>% 
   rbind(rao) %>% 
   rbind(raytheon) %>% 
   rbind(reliance) %>% 
-  rbind(reliant) %>% 
+  rbind(reliant) %>%
+  rbind(reliant_res) %>%
   rbind(renault) %>% 
   rbind(repsol) %>% 
   rbind(rep_industries) %>% 
@@ -870,6 +859,7 @@ M = rbind(rj, rabobank) %>%
   rbind(resona) %>% 
   rbind(rexel) %>%  
   rbind(ricoh) %>%  
+  rbind(rio_tinto) %>%
   rbind(rite_aid) %>% 
   rbind(rjr) %>% 
   rbind(robert_bosch) %>% 
@@ -884,7 +874,7 @@ M = rbind(rj, rabobank) %>%
   rbind(royal_scotland) %>% 
   rbind(royal_dutch) %>% 
   rbind(royal_ins) %>% 
-  rbind(royal_kpn)
+  rbind(royal_kpn) %>%
   rbind(royal_mail) %>% 
   rbind(royal_philips) %>% 
   rbind(royal_ptt) %>% 
@@ -903,7 +893,7 @@ S = rbind(sabmiller, safeway) %>%
   rbind(santander) %>% 
   rbind(sanyo) %>% 
   rbind(sap) %>% 
-  rbind(saralee) %>% 
+  rbind(sara_lee) %>% 
   rbind(sberbank) %>%  
   rbind(sbc) %>% 
   rbind(schering) %>%  
@@ -922,7 +912,7 @@ S = rbind(sabmiller, safeway) %>%
   rbind(shimizu) %>% 
   rbind(shinhan) %>% 
   rbind(showa) %>% 
-  rbind(siemens)
+  rbind(siemens) %>%
   rbind(sinopec) %>% 
   rbind(sinopharm) %>% 
   rbind(sistema) %>% 
@@ -949,7 +939,7 @@ S = rbind(sabmiller, safeway) %>%
   rbind(stpaul) %>% 
   rbind(standard) %>%
   rbind(standard_life) %>% 
-  rbind(staples)
+  rbind(staples) %>%
   rbind(state_bank) %>%
   rbind(state_farm) %>% 
   rbind(state_grid) %>%
@@ -973,6 +963,7 @@ S = rbind(sabmiller, safeway) %>%
   rbind(suncor) %>%
   rbind(sunkyong) %>%
   rbind(sunoco) %>%
+  rbind(suntory) %>%
   rbind(supervalu) %>%
   rbind(surgutneftegas) %>%
   rbind(suzuken) %>%
@@ -997,29 +988,34 @@ t = rbind(td, taikang) %>%
   rbind(teachers_ins) %>% 
   rbind(tech_data) %>% 
   rbind(telefonos) %>% 
+  rbind(telecom_it) %>%
   rbind(telecomunicacoes) %>%  
   rbind(telefonaktiebolaget) %>% 
   rbind(telefonica) %>%  
   rbind(telstra) %>%  
   rbind(tencent) %>% 
   rbind(tenet) %>% 
-  rbind(tenneco) %>% 
+  rbind(tenneco) %>%
+  rbind(tesco) %>% 
+  rbind(tesoro) %>% 
   rbind(teva) %>% 
   rbind(texaco) %>% 
   rbind(texas_inst) %>% 
   rbind(texas_utilities) %>% 
   rbind(textron) %>% 
   rbind(bank_tokyo) %>%
+  rbind(british_pet) %>%
   rbind(broken_hill) %>% 
   rbind(chugoku) %>% 
   rbind(daiiichi_ins) %>% 
   rbind(fuji_bank) %>% 
   rbind(great_universal) %>% 
-  rbind(industrial_bank)
+  rbind(industrial_bank) %>%
   rbind(longterm_bank) %>% 
   rbind(may_dpt) %>% 
   rbind(mitsubishi_bank) %>% 
   rbind(mitsubishi_trust) %>% 
+  rbind(mitsui_trust) %>%
   rbind(nippon_credit) %>% 
   rbind(nomura_sec) %>% 
   rbind(norinchukin) %>%  
@@ -1042,7 +1038,7 @@ t = rbind(td, taikang) %>%
   rbind(thomson) %>% 
   rbind(thyssen) %>%
   rbind(time_warner) %>% 
-  rbind(tnk)
+  rbind(tnk) %>%
   rbind(tnt) %>%
   rbind(tohoku) %>% 
   rbind(tokio_marine_hldg) %>%
@@ -1066,7 +1062,7 @@ t = rbind(td, taikang) %>%
   rbind(tui) %>%
   rbind(twentyfirst) %>%
   rbind(tyco) %>%
-  rbind(tyson) %>%
+  rbind(tyson)
     
 write.csv(t,"t")
   
@@ -1124,7 +1120,7 @@ W = rbind(wachovia, walgreen) %>%
   rbind(warner_lambert) %>% 
   rbind(washington_mutual) %>% 
   rbind(waste) %>% 
-  rbind(wellpoint) %>% 
+  rbind(well) %>% 
   rbind(wells_fargo) %>% 
   rbind(wesfarmers) %>% 
   rbind(westj_rail) %>% 
@@ -1151,13 +1147,13 @@ write.csv(W,"W")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter X
 X = rbind(xcel, xerox) %>% 
-  rbind(xstrata) %>% 
+  rbind(xstrata)
   
 write.csv(X,"X")
 
 #Merging the datasets of companys that have a 10-k report starting with the latter Y
 Y = rbind(yamada, yamaha) %>% 
-  rbind(yankuang) %>% 
+  rbind(yankuang)
   
 write.csv(Y,"Y")
 
@@ -1167,4 +1163,37 @@ Z = rbind(zf, zhejiang) %>%
   rbind(zurich_ins) 
 
 write.csv(Z,"Z")
+
+#Merging all the datasets into one 
+cik_dataset = rbind(A, B) %>%
+  rbind(C) %>%
+  rbind(D) %>%
+  rbind(E) %>%
+  rbind(f) %>%
+  rbind(G) %>%
+  rbind(H) %>%
+  rbind(ii) %>%
+  rbind(J) %>%
+  rbind(L) %>%
+  rbind(M) %>%
+  rbind(N) %>%
+  rbind(O) %>%
+  rbind(p1) %>%
+  rbind(Q) %>%
+  rbind(R) %>%
+  rbind(S) %>%
+  rbind(t) %>% 
+  rbind(U) %>% 
+  rbind(V) %>% 
+  rbind(W) %>% 
+  rbind(X) %>% 
+  rbind(Y) %>% 
+  rbind(Z)
+
+write.csv(cik_dataset, "cik_dataset") 
+
+
+  
+
+
 
